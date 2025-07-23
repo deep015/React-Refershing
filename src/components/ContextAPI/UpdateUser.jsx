@@ -1,32 +1,34 @@
-import React, { useContext, useState } from 'react';
-import { userContext } from './UserProvider';
+
+//UPDATE THE USERDATA
+
+import React, { useContext,useState } from 'react'
+import { UserContext } from './UserContext'
 
 const UpdateUser = () => {
-  const { updateUser } = useContext(userContext); // ✅ fixed here
-  const [newName, setNewName] = useState('');
 
-  const handleSubmit = (e) => {
+  const {UpdateUser} = useContext(UserContext)
+
+  const [newName,setNewName]=useState('')
+   
+  const handleSubmit =(e)=>{
     e.preventDefault();
-    if (newName.trim()) {
-      updateUser(newName); // ✅ just pass the name string
-      setNewName('');
+    if(newName.trim()){
+      UpdateUser(newName);
+      setNewName('')
     }
-  };
-
+  }
   return (
     <div>
-      <h2>Update User Name</h2>
-      <form onSubmit={handleSubmit}>
+      <h2>Update User </h2>
+      <form action="" onSubmit={handleSubmit}>
         <input
-          type="text"
-          placeholder="Enter new name"
-          value={newName}
-          onChange={(e) => setNewName(e.target.value)}
-        />
-        <button type="submit">Submit</button>
+         type="text" 
+         value={newName}
+        onChange={(e)=>setNewName(e.target.value)} />
+        <button type='submit'>Submit</button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default UpdateUser;
+export default UpdateUser

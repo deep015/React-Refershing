@@ -1,15 +1,45 @@
 import React, { useContext } from 'react'
-import { userContext } from './UserProvider'
-const UserProfile = () => {
+import { UserContext } from './UserContext';
 
-    const {user} =useContext(userContext)
+
+/*here we read the data from the Parent component 
+using the UseContext Hook */
+const UserProfile = () => {
+   
+  const {user} = useContext(UserContext)
 
   return (
     <div>
-        <h1>UserProfile</h1>
-        <h2> Name :{user.name}</h2>
+      <h1>User Profile :</h1>
+      <h2>Name:{user.name}</h2>
     </div>
   )
 }
 
-export default UserProfile
+export default UserProfile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const UserProfile = () => {
+
+//     const {user} =useContext(userContext)
+
+//   return (
+//     <div>
+//         <h1>UserProfile</h1>
+//         <h2> Name :{user.name}</h2>
+//     </div>
+//   )
+// }
+
+// export default UserProfile
