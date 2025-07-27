@@ -20,7 +20,7 @@ const reducer=(state,action)=>{
                 }
             }
             default:
-                return state
+                return state;
         }
     }
 const CounterApp = () => {

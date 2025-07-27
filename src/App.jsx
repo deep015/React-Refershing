@@ -3,6 +3,9 @@ import UserProvider from './components/ContextAPI/UserProvider';
 import UserProfile from './components/ContextAPI/UserProfile';
 import UpdateUser from './components/ContextAPI/UpdateUser';
 import CounterApp from './components/UseReducerHook/CounterApp';
+import RegisterForm from './components/CustomHook/RegisterForm';
+
+import Game from './components/RPS-Game/Components/Game';
 
 const App = () => {
   return (
@@ -11,7 +14,9 @@ const App = () => {
       <UpdateUser />
     </UserProvider>*/
 
-    <CounterApp />
+   /* <CounterApp />*/
+
+   <Game />
   );
 };
 
